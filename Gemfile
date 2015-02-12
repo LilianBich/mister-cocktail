@@ -1,6 +1,14 @@
 source 'https://rubygems.org'
 
+# Gemfile better error Gem
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
 
+gem 'bootstrap-sass', '~> 3.3.1'
+gem 'font-awesome-sass', '~> 4.2.0'
+gem 'bootstrap_form'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record

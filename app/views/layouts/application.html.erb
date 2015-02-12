@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MisterCocktail</title>
+  <title><%= yield(:title) || "Loul's Cocktail" %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
-
+  <%= render "shared/navbar" %>
+  <%= yield %>
+  <%= render "shared/footer" %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script>
+      window.sr = new scrollReveal();
+  </script>
+  <%= yield(:js) %>
 </body>
 </html>
