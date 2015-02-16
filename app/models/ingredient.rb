@@ -7,9 +7,9 @@ class Ingredient < ActiveRecord::Base
 
   private
 
-  def check_for_orders
+  def check_for_cocktails
     if cocktails.count > 0
-      errors.add_to_base("cannot delete customer while orders exist")
+      errors.add_to_base("cannot delete ingredient while cocktail exist")
       return false
     end
   end

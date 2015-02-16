@@ -1,2 +1,15 @@
-<h1>Cocktails#show</h1>
-<p>Find me in app/views/cocktails/show.html.erb</p>
+<h1><%= @cocktail.name %></h1>
+
+<h2>Ingredients</h2>
+<ul>
+  <% @cocktail.doses.each do |dose|%>
+    <li>
+      <%= dose.description %> <%=dose.ingredient.name %>
+    </li>
+  <% end %>
+  <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %>
+
+</ul>
+
+
+<%= link_to "Back to cocktail list", cocktails_path %>

@@ -1,0 +1,9 @@
+<div class="cocktail_card">
+  <%= image_tag "http://placehold.it/300x300", class: "round-img" %>
+  <p><%= cocktail.name %></p>
+  <%= link_to cocktail_path(cocktail) do %>
+    <div class="btn btn-primary">
+      Details
+    </div>
+  <% end %>
+</div>

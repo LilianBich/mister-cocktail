@@ -1,0 +1,6 @@
+<%= form_for [ @cocktail, @dose ] do |f| %>
+<%= @dose.inspect %>
+  <%= f.text_field :description %>
+  <%= f.select :ingredient_id, options_from_collection_for_select(Ingredient.all, 'id', 'name') %>
+  <%= f.submit %>
+<% end %>
